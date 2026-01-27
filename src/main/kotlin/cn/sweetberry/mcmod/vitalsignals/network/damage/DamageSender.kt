@@ -18,7 +18,8 @@ object DamageSender {
             return
         }
         ServerPlayNetworking.send(
-            ctx.target,
+            // 本方法第1个if块已确保
+            ctx.target!!,
             DamageS2CPayload(data),
         )
     }
