@@ -13,27 +13,17 @@
 	},
 	"license": "MIT",
 	"icon": "assets/vital-signals/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
 		"main": [
 			{
 				"value": "cn.sweetberry.mcmod.vitalsignals.VitalSignals",
 				"adapter": "kotlin"
 			}
-		],
-		"client": [
-			{
-				"value": "cn.sweetberry.mcmod.vitalsignals.VitalSignalsClient",
-				"adapter": "kotlin"
-			}
 		]
 	},
 	"mixins": [
-		"vital-signals.mixins.json",
-		{
-			"config": "vital-signals.client.mixins.json",
-			"environment": "client"
-		}
+		"vital-signals.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.4",
